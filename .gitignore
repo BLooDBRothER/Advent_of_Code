@@ -1,0 +1,8 @@
+*.o
+sample.txt
+
+bin/
+
+.vscode
+
+.env
