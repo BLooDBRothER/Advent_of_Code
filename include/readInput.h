@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string constructEachDayInputFilePath(string day, string type) {
+string constructEachDayInputFilePath(string day, string year, string type) {
     // Buffer to hold the current working directory
     char buffer[PATH_MAX];
 
@@ -16,13 +16,16 @@ string constructEachDayInputFilePath(string day, string type) {
         std::cerr << "Error getting current working directory." << std::endl;
     }
 
+    string file_path = "./" + year + "/day" + day + "/" + type + ".txt";
+    cout << "Input file path: " << file_path << endl;
+
     cout << "Solution for the day" << day << endl;
-    return "./day" + day + "/" + type + ".txt";
+    return "./" + year + "/day" + day + "/" + type + ".txt";
 }
 
-vector<string> readInput(string dayNo, string type = "input") {
+vector<string> readInput(string dayNo, string year, string type = "input") {
 
-    InputFile inputFile(constructEachDayInputFilePath(dayNo, type));
+    InputFile inputFile(constructEachDayInputFilePath(dayNo, year, type));
 
     return inputFile.getInput();
 }

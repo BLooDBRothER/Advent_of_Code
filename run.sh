@@ -39,5 +39,5 @@ echo "Starting..."
 mkdir -p $outputFolder
 
 echo "Compiling $fileName file... && running file"
-g++ --std=c++20 -I $includeFilePath -o $exeOutputFilePath $cppfilePath && $exeOutputFilePath
+g++ --std=c++20 -I $includeFilePath -o $exeOutputFilePath $cppfilePath && $exeOutputFilePath $YEAR
 
