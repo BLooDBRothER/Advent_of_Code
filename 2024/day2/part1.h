@@ -4,10 +4,6 @@ bool check_is_safe(vector<int32_t> report_values) {
         int32_t current_value = report_values[idx];
         int32_t next_value = report_values[idx + 1];
 
-        if(current_value == next_value) {
-            return false;
-        }
-
         if(order_flag == 0) {
             order_flag = current_value < next_value ? 1 : -1;
         }
