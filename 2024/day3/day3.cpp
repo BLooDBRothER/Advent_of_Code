@@ -9,7 +9,7 @@ using namespace std;
 using namespace std::chrono;
 
 int main(int argc, char* argv[]) {
-    vector<string> inputs = readInput("3", argv[1]);
+    vector<string> inputs = readInput("3", argv[1], "input");
     
     auto start = high_resolution_clock::now();
 
@@ -20,12 +20,12 @@ int main(int argc, char* argv[]) {
     cout << "Time Taken - "
          << (duration.count() / 1000000.0) << " sec" << endl;
 
-//     start = high_resolution_clock::now();
+    start = high_resolution_clock::now();
 
-//     cout << "--- Part 2 --- \n" << {<call_method>} << endl;
+    cout << "--- Part 2 --- \n" << part_2::scan_courrupted_memory(inputs) << endl;
 
-//     stop = high_resolution_clock::now();
-//     duration = duration_cast<microseconds>(stop - start);
-//     cout << "Time Taken - "
-//          << (duration.count() / 1000000.0) << " sec" << endl;
+    stop = high_resolution_clock::now();
+    duration = duration_cast<microseconds>(stop - start);
+    cout << "Time Taken - "
+         << (duration.count() / 1000000.0) << " sec" << endl;
 }
