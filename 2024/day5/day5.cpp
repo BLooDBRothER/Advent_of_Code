@@ -20,12 +20,12 @@ int main(int argc, char* argv[]) {
     cout << "Time Taken - "
          << (duration.count() / 1000000.0) << " sec" << endl;
 
-//     start = high_resolution_clock::now();
+    start = high_resolution_clock::now();
 
-//     cout << "--- Part 2 --- \n" << {<call_method>} << endl;
+    cout << "--- Part 2 --- \n" << part_2::get_sum_of_invalid_page_number(inputs) << endl;
 
-//     stop = high_resolution_clock::now();
-//     duration = duration_cast<microseconds>(stop - start);
-//     cout << "Time Taken - "
-//          << (duration.count() / 1000000.0) << " sec" << endl;
+    stop = high_resolution_clock::now();
+    duration = duration_cast<microseconds>(stop - start);
+    cout << "Time Taken - "
+         << (duration.count() / 1000000.0) << " sec" << endl;
 }
