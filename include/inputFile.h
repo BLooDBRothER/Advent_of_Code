@@ -2,8 +2,6 @@
 #include <vector>
 #include <fstream>
 
-#define PATH_MAX 4096
-
 using namespace std;
 
 class InputFile {
