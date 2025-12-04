@@ -2,6 +2,7 @@
 #include <readInput.h>
 #include <chrono>
 
+#include "utils.h"
 #include "part1.h"
 #include "part2.h"
 
@@ -12,8 +13,7 @@ int main(int argc, char* argv[]) {
     vector<string> inputs = readInput("2", argv[1]);
     
     auto start = high_resolution_clock::now();
-
-    cout << "--- Part 1 --- \n" << get_invalid_id_sum(inputs) << endl;
+    cout << "--- Part 1 --- \n" << part1::get_invalid_id_sum(inputs) << endl;
     
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
@@ -22,10 +22,10 @@ int main(int argc, char* argv[]) {
 
     start = high_resolution_clock::now();
 
-//     cout << "--- Part 2 --- \n" << {<call_method>} << endl;
+    cout << "--- Part 2 --- \n" << part2::get_invalid_id_sum(inputs) << endl;
 
-//     stop = high_resolution_clock::now();
-//     duration = duration_cast<microseconds>(stop - start);
-//     cout << "Time Taken - "
-//          << (duration.count() / 1000000.0) << " sec" << endl;
+    stop = high_resolution_clock::now();
+    duration = duration_cast<microseconds>(stop - start);
+    cout << "Time Taken - "
+         << (duration.count() / 1000000.0) << " sec" << endl;
 }
