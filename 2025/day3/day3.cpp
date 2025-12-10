@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
     
     auto start = high_resolution_clock::now();
 
-    auto part1_solution = get_total_joltage(inputs);
+    auto part1_solution = part1::get_total_joltage(inputs);
     cout << "\n╔════════════════════════════════════════╗" << endl;
     cout << "║            PART 1 SOLUTION             ║" << endl;
     cout << "╠════════════════════════════════════════╣" << endl;
@@ -26,14 +26,14 @@ int main(int argc, char* argv[]) {
 
     start = high_resolution_clock::now();
 
-    // auto part2_solution = {<call_method>};
-    // cout << "╔════════════════════════════════════════╗" << endl;
-    // cout << "║            PART 2 SOLUTION             ║" << endl;
-    // cout << "╠════════════════════════════════════════╣" << endl;
-    // cout << "║  Answer: " << part2_solution << endl;
+    auto part2_solution = part2::get_total_joltage(inputs);
+    cout << "╔════════════════════════════════════════╗" << endl;
+    cout << "║            PART 2 SOLUTION             ║" << endl;
+    cout << "╠════════════════════════════════════════╣" << endl;
+    cout << "║  Answer: " << part2_solution << endl;
 
-    // stop = high_resolution_clock::now();
-    // duration = duration_cast<microseconds>(stop - start);
-    // cout << "║  Time:   " << (duration.count() / 1000000.0) << " seconds" << endl;
-    // cout << "╚════════════════════════════════════════╝\n" << endl;
+    stop = high_resolution_clock::now();
+    duration = duration_cast<microseconds>(stop - start);
+    cout << "║  Time:   " << (duration.count() / 1000000.0) << " seconds" << endl;
+    cout << "╚════════════════════════════════════════╝\n" << endl;
 }
